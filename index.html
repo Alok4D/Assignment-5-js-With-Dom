@@ -1,18 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bus Landing Project</title>
-    <link rel="stylesheet" href="Styles/style.css">
-    <link rel="shortcut icon" href="images/web-icon-photo/bus-icon.jpg" type="image/x-icon">
-    <!--  -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Bus Ticket</title>
+  <!-- tailwind css -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- daisy ui -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <style>
+    .inter {
+      font-family: "Inter", sans-serif;
+    }
+    .raleway {
+      font-family: "Raleway", sans-serif;
+    }
+  </style>
+
 </head>
 <body>
 
-    <header class="header mt-14">
+    <header class="header mt-14 lg:w-5/6 mx-auto raleway ">
 
         <div class="navbar bg-base-100">
             <div class="navbar-start">
@@ -24,7 +38,6 @@
                   <li><a>Home</a></li>
                   <li>
                     <a>About</a>
-                    
                   </li>
                   <li><a>Destination</a></li>
                   <li><a>Search</a></li>
@@ -46,13 +59,53 @@
               <a class="btn"><span class="text-green-400">Bus</span> <img src="./images/bus-icon.png" alt=""></a>
             </div>
           </div>
+          <!-- banner section -->
+          <section class="mt-7 flex flex-col justify-center items-center relative">
+            <div class="flex flex-col justify-center items-center gap-11 bg-[url('./images/banner.png')] bg-no-repeat bg-cover bg-center h-[650px] w-full rounded-[32px]">
+              <div class="text-4xl lg:text-6xl font-extrabold text-white text-center">End-to-End Travel with <br><span class="text-[#1DD100]">P Paribahan</span></div>
+              <p class="text-center inter font-normal text-base lg:text-lg text-white max-w-2xl">Welcome to P Paribahan, your ultimate destination for hassle-free bus ticket booking! Whether you're planning a weekend getaway or a daily commute, we've got you covered with a wide range of routes, convenient schedules, and secure online booking. Experience the ease of travel with us!</p>
+              <button class="font-bold text-xl text-[#030712] py-5 px-7 bg-[#1DD100] rounded-xl">Buy Tickets</button>  
+            </div>
+            
+      
+      
+            <!-- stats -->
+            <div class="bg-transparent flex gap-6 flex-wrap lg:flex-nowrap lg:absolute lg:-bottom-16">
+        
+              <div class="stat bg-white rounded-3xl flex items-center inter p-8 border-b-4 border-[#1DD100]">
+                <div class="stat-title w-16"><img src="images/people.png" alt=""></div>
+                <div>
+                  <h3 class="text-3xl font-bold text-[#030712]">500k+</h3>
+                  <p class="w-32 text-base font-normal text-[#03071299]">Registered users</p>
+                </div>
+              </div>
+      
+              <div class="stat bg-white rounded-3xl flex items-center inter p-8 border-b-4 border-[#1DD100]">
+                <div class="stat-title w-16"><img src="images/ticket-cupon.png" alt=""></div>
+                <div>
+                  <h3 class="text-3xl font-bold text-[#030712]">1.7 lacks</h3>
+                  <p class="w-32 text-base font-normal text-[#03071299]">Tickets sold</p>
+                </div>
+              </div>
+      
+              <div class="stat bg-white rounded-3xl flex items-center inter p-8 border-b-4 border-[#1DD100]">
+                <div class="stat-title w-16"><img src="images/stoppage.png" alt=""></div>
+                <div>
+                  <h3 class="text-3xl font-bold text-[#030712]">80K+</h3>
+                  <p class="w-32 text-base font-normal text-[#03071299]">Rental partners</p>
+                </div>
+              </div>
+              
+            </div>
+          </section>
+         
 
-          <div class="banner-section">
+          <!-- <div class="banner-section">
             <div class="mt-7 flex flex-col items-center ">
                 <div class="card bg-[] shadow-xl image-full">
                   <figure><img class="" src="images/banner.png"/></figure>
                   <div class="card-body flex items-center justify-center">
-                    <h2 class="card-title text-[28px] pt-[210px] ">End-to-End Travel with <br>
+                    <h2 class="card-title text-[28px] pt-[10px] ">End-to-End Travel with <br>
                          P Paribahan</h2>
                     <p class="text-[16px] pt-4">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
                     <div class="card-actions justify-start pt-8">
@@ -61,8 +114,14 @@
                   </div>
                 </div>
               </div>
-          </div>
+          </div> -->
     </header>
+    <main>
+
+    </main>
+    <footer>
+      
+    </footer>
 
 
 
