@@ -41,27 +41,19 @@ const seatCount = document.querySelector('#seat-count');
 const leftSeats = document.querySelector('#left-seats');
 const cuponButton = document.querySelector('#cupon-button');
 const submitButt = document.querySelector('#submit-button');
-// cupons
 const cuponsArr = ['NEW15', 'Couple 20'];
-
 let cuponSuccess = false;
 let discount = 0;
-
-
-// toogles color
+// click color
 function toogleCol (seat) {
   seat.classList.toggle('bg-[#F7F8F8]');
   seat.classList.toggle('text-[#03071280]');
   seat.classList.toggle('bg-[#1DD100]');
   seat.classList.toggle('text-white');
 }
-
-// submit prevets default
 function prevD (e) {
   e.preventDefault();
 }
-
-// update seat table
 function updateSeatTable () {
   const tBody = document.querySelector('tBody');
   tBody.innerHTML = '';
@@ -75,15 +67,11 @@ function updateSeatTable () {
     `
   });
 }
-
-// total price
 function totalPrice () {
   const totalPrice = document.querySelector('#total-price');
   totalPrice.innerText = 0;
   totalPrice.innerText = ticketsArr.length * 550;
-}
-
-// grand price 
+} 
 function grandPrice () {
   const totalPrice = document.querySelector('#grand-price');
   totalPrice.innerText = 0;
@@ -93,8 +81,6 @@ function grandPrice () {
     totalPrice.innerText = ticketsArr.length * 550;
   }
 }
-
-// disable submit button 
 function makeSubmitDisable () {
   const phoneNumber = document.querySelector('#phone');
   submitButt.disabled = (ticketsArr.length !== 0 && phoneNumber.value !== '') ? false : true;
@@ -106,8 +92,6 @@ function makeSubmitDisable () {
     submitButt.classList.remove('bg-gray-300');
   }
 }
-
-// make cupon button disabled
 function makeCuponDisabled () {
   cuponButton.disabled = ticketsArr.length !== 4;
   if(cuponButton.disabled) {
@@ -118,15 +102,12 @@ function makeCuponDisabled () {
     cuponButton.classList.remove('bg-gray-300');
   }
 }
-
-// run on first render
 makeSubmitDisable();
 makeCuponDisabled();
 
 // on click seats
 seats.forEach(seat => {
   seat.addEventListener('click', ()=> {
-    // tickets array toogling
     if(ticketsArr.includes(seat.id)) {
       ticketsArr = ticketsArr.filter(ticket => ticket !== seat.id);
       toogleCol(seat);
@@ -149,9 +130,7 @@ seats.forEach(seat => {
   })
 })
 
-// on cupon button click
-
-// show hide invalid
+// invalid
 function showInvalid () {
   const invalid = document.querySelector('#invalid');
   if(!cuponSuccess) {
@@ -161,7 +140,7 @@ function showInvalid () {
   }
 }
 
-// show hide discount
+//hide discount
 function showDis () {
   if(ticketsArr.length !== 4) {
     cuponSuccess = false;
