@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smart Bus Ticket</title>
+  <link rel="stylesheet" href="Styles/style.css">
   <!-- tailwind css -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- daisy ui -->
@@ -17,66 +18,50 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-  <style>
-    .inter {
-      font-family: "Inter", sans-serif;
-    }
-    .raleway {
-      font-family: "Raleway", sans-serif;
-    }
-    .roboto {
-      font-family: "Roboto", sans-serif;
-    }
-  </style>
-
 </head>
 <body>
-  <!-- header -->
+  <!-- header Section -->
   <header class="w-[96%] lg:w-5/6 mx-auto raleway mt-5">
-    <!-- navigation -->
-    <nav>
-      <div class="navbar bg-base-100">
-        <div class="navbar-start">
-          <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-            </div>
-            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-              <li class="text-lg text-[#030712B2] font-medium"><a>Home</a></li>
-              <li class="text-lg text-[#030712B2] font-medium"><a>About</a></li>
-              <li class="text-lg text-[#030712B2] font-medium"><a>Destination</a></li>
-              <li class="text-lg text-[#030712B2] font-medium"><a>Search</a></li>
-            </ul>
+    <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
           </div>
-          <a class="btn btn-ghost font-extrabold text-3xl text-[#030712]">P-Ticket</a>
-        </div>
-        <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal px-1 space-x-14">
-            <li class="text-lg text-[#030712B2] font-medium"><a>Home</a></li>
-            <li class="text-lg text-[#030712B2] font-medium">
-              <summary>About</summary>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a>Home</a></li>
+            <li>
+              <a>About</a>
             </li>
-            <li class="text-lg text-[#030712B2] font-medium"><a>Destination</a></li>
-            <li class="text-lg text-[#030712B2] font-medium"><a>Search</a></li>
+            <li><a>Destination</a></li>
+            <li><a>Search</a></li>
           </ul>
         </div>
-        <div class="navbar-end text-xl font-bold">
-          <a class="btn bg-[#1DD1001A] border-[#1DD10066] text-[#1DD100]">Bus <img src="images/bus-icon.png" alt=""></a>
-        </div>
+        <a class="btn btn-ghost text-xl">P-Ticket</a>
       </div>
-    </nav>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a>Home</a></li>
+          <li>
+            <a>About</a>
+          </li>
+          <li><a>Destination</a></li>
+          <li><a>Search</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <a class="btn"><span class="text-green-400">Bus</span> <img src="./images/bus-icon.png" alt=""></a>
+      </div>
+    </div>
 
     <!-- banner section -->
     <section class="mt-7 flex flex-col justify-center items-center relative">
       <div class="flex flex-col justify-center items-center gap-11 bg-[url('./images/banner.png')] bg-no-repeat bg-cover bg-center h-[650px] w-full rounded-[32px]">
         <div class="text-4xl lg:text-6xl font-extrabold text-white text-center">End-to-End Travel with <br><span class="text-[#1DD100]">P Paribahan</span></div>
-        <p class="text-center inter font-normal text-base lg:text-lg text-white max-w-2xl">Welcome to P Paribahan, your ultimate destination for hassle-free bus ticket booking! Whether you're planning a weekend getaway or a daily commute!</p>
-        <button onclick="scrollToTickets()" class="font-bold text-xl text-[#030712] py-5 px-7 bg-[#1DD100] rounded-xl">Buy Tickets</button>  
+        <p class="text-center inter font-normal text-base lg:text-lg text-white max-w-2xl">To ensure fastest communication among transport business network and travelers with advance security and administrative control, to gain faster and secured growth of business with larger customer segment.</p>
+        <button onclick="scrollTickets()" class="font-bold text-xl text-[#030712] py-5 px-7 bg-[#1DD100] rounded-xl">Buy Tickets</button>  
       </div>
-      
-
-
-      <!-- stats -->
+      <!--  -->
       <div class="bg-transparent flex gap-6 flex-wrap lg:flex-nowrap lg:absolute lg:-bottom-16">
   
         <div class="stat bg-white rounded-3xl flex items-center inter p-8 border-b-4 border-[#1DD100]">
@@ -107,15 +92,14 @@
     </section>
 
   </header>
+  <!-- header Section End-->
+  
   <!-- main -->
   <main class="lg:mt-14">
-    <!-- offer section -->
     <section class="w-[96%] lg:w-11/12 mx-auto mt-36 space-y-12">
+      <!-- card -->
       <h1 class="text-4xl font-bold text-[#030712] text-center">Best offers for you</h1>
-
-      <!-- cupons -->
       <div class="flex flex-wrap gap-6">
-        <!-- new cupon -->
         <div class="flex-1 flex bg-[#FFBF0F] justify-between items-center px-12 rounded-3xl w-[220px]">
           <div class="inter space-y-2">
             <h2 class="text-2xl md:text-4xl font-extrabold text-[#030712CC]">15% OFF</h2>
@@ -123,14 +107,12 @@
             <h6 class="text-[#03071280] font-medium text-xs md:text-base">use by January 2024</h6>
           </div>
           <img src="./images/divider.svg" alt="">
-          <!-- cupon -->
           <div class="raleway space-y-2">
           <h3 class="text-[#030712] text-xl md:text-3xl font-bold">NEW15</h3>
           <span class="text-[#03071266] text-xs md:text-base font-medium">Coupon Code</span>
           </div>
         </div>
-        
-        <!-- couple cupon -->
+       
         <div class="flex-1 flex bg-[#F78C9C] justify-between items-center px-12 rounded-3xl w-[220px]">
           <div class="inter space-y-2">
             <h2 class="text-2xl md:text-4xl font-extrabold text-[#030712CC]">20% OFF</h2>
@@ -138,14 +120,13 @@
             <h6 class="text-[#03071280] font-medium text-xs md:text-base">use by January 2024</h6>
           </div>
           <img src="./images/divider.svg" alt="" class="h-full">
-          <!-- cupon -->
+         
           <div class="raleway space-y-2">
           <h3 class="text-[#030712] text-xl md:text-3xl font-bold">Couple 20</h3>
           <span class="text-[#03071266] text-xs md:text-base font-medium">Coupon Code</span>
           </div>
         </div>
       </div>
-      <!-- see all offers button -->
       <button class="text-[#1DD100] text-xl font-bold block mx-auto border border-[#1DD100] rounded-lg px-7 py-5">See All Offers</button>
     </section>
     
@@ -209,27 +190,20 @@
 
         <!-- functional tickets -->
         <div class="md:p-6 bg-white rounded-3xl flex flex-col lg:flex-row justify-evenly">
-          <!-- tickets -->
           <div class="md:w-[60%] space-y-6">
             <div class="p-6 border-dashed border-[#03071233] border-b">
               <h3 class="text-[#030712] font-semibold text-2xl">Select Your Seat</h3>
             </div>
-            <!-- available and selected icon -->
             <div class="p-4 flex justify-between border-b border-dashed border-[#03071233]">
               <span class="flex"><img src="./images/seat-gray.png" alt="">Available</span>
               <span class="flex"><img src="./images/seat-green-filled.png" alt="">Selected</span>
             </div>
 
-            <!-- seats -->
-            <div class="inter flex justify-between">
-              <!-- a - a2 -->
-              <div class="seat-seat2 grid grid-cols-3 gap-1 lg:gap-6 grid-rows-11">
-                
+            <!-- bus tickets section -->
+            <div class="inter flex gap-6 ml-[88px]">
+              <div class="ticket grid grid-cols-3 gap-1 lg:gap-6 grid-rows-11">
               </div>
-              <!-- a3 - a4 -->
-              <div class="seat4 grid grid-cols-2 gap-1 lg:gap-6">
-
-                
+              <div class="ticket4 grid grid-cols-2 gap-1 lg:gap-6">
               </div>
             </div>
           </div>
@@ -348,10 +322,11 @@
     </dialog>
 
   </main>
+
   <!-- footer -->
   <footer class="bg-[#030712] text-white py-24">
     <section class="lg:w-5/6 mx-auto space-y-7">
-      <!-- google play section -->
+      <!-- P-Ticket -->
       <div class="flex md:flex-row flex-col justify-between items-center">
         <div>
           <h2 class="text-4xl font-extrabold">P-Ticket</h2>
@@ -360,7 +335,6 @@
         <div class="space-y-4">
           <h5 class="text-xl font-semibold">Download our app</h5>
           <div class="border-white border rounded-lg flex gap-2 p-2">
-            <!-- playstore -->
             <img src="./images/playstore.png" alt="" class="w-11">
             <div>
               <span class="text-[#FFFFFFCC] text-sm font-normal">Get it on</span>
@@ -369,8 +343,8 @@
           </div>
         </div>
       </div>
-      <hr class="border-dashed">
-      <!-- copy right section -->
+      <hr class="border-dotted">
+      <!-- footer last part -->
       <div class="flex md:flex-row flex-col justify-between">
         <div>@all rights reserved, P-Ticket services limited.2024</div>
         <div class="flex gap-7">
@@ -382,6 +356,6 @@
     </section>
   </footer>
 
-<script src="index.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>

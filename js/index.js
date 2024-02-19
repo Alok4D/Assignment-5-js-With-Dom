@@ -1,41 +1,35 @@
-// bus seats render
-
-const seatLetters = 'ABCDEFGHIJ'.split('');
-
-const seat2 = document.querySelector('.seat-seat2');
-const seat4 = document.querySelector('.seat4');
-seat4.innerHTML = `<div class="col-start-2 bg-[#0307121A] px-5 py-3 lg:px-10 lg:py-5 rounded-xl"><img src="./images/driver seat.svg" alt=""></div>`;
-seat2.innerHTML = `<div class="col-end-4"></div>`;
-
-seatLetters.forEach(letter => {
-  seat2.innerHTML += `
+// Start Js code........
+// bus ticket Section
+const TicketL = 'ABCDEFGHIJ'.split('');
+const busSeat = document.querySelector('.ticket');
+const ticket4 = document.querySelector('.ticket4');
+ticket4.innerHTML = `<div class="col-start-2 bg-[#0307121A] px-5 py-3 lg:px-10 lg:py-5 rounded-xl"><img src="./images/driver seat.svg" alt=""></div>`;
+busSeat.innerHTML = `<div class="col-end-4"></div>`;
+// 
+TicketL.forEach(letter => {
+  busSeat.innerHTML += `
   <div class="py-5 text-center">${letter}</div>
   <button class="seat font-medium text-lg text-[#03071280] bg-[#F7F8F8] px-5 py-3 lg:px-10 lg:py-5 rounded-xl cursor-pointer" id="${letter}1">${letter}1</button>
   <button class="seat font-medium text-lg text-[#03071280] bg-[#F7F8F8] px-5 py-3 lg:px-10 lg:py-5 rounded-xl cursor-pointer" id="${letter}2">${letter}2</button>
   `
-
-  seat4.innerHTML += `
+  ticket4.innerHTML += `
   <button class="seat font-medium text-lg text-[#03071280] bg-[#F7F8F8] px-5 py-3 lg:px-10 lg:py-5 rounded-xl cursor-pointer" id="${letter}3">${letter}3</button>
+  
   <button class="seat font-medium text-lg text-[#03071280] bg-[#F7F8F8] px-5 py-3 lg:px-10 lg:py-5 rounded-xl cursor-pointer" id="${letter}4">${letter}4</button>
   `
 });
-
-document.querySelector('form').addEventListener('submit', (e)=> {
-  e.preventDefault();
+  erySelector('form').addEventListener('submit', (e)=> {e.preventDefault();
 })
 
-function scrollToTickets () {
+function scrollTickets () {
   const tickets = document.querySelector('#tickets');
   tickets.scrollIntoView({ behavior: 'smooth' });
 }
+// bus ticket Section end...
 
-// ----------------------------------------------------/////////////////----------------------------------------------------//////
 
-
-// ticket array
-let ticketsArr = [];
-
-// seats functionality
+// ticket
+let tArray = [];
 const seats = document.querySelectorAll('.seat');
 const seatCount = document.querySelector('#seat-count');
 const leftSeats = document.querySelector('#left-seats');
