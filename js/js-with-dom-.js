@@ -1,12 +1,10 @@
 // Start Js code........
 // bus ticket Section
 const TicketL = 'ABCDEFGHIJ'.split('');
-
 const busSeat = document.querySelector('.ticket');
 const ticket4 = document.querySelector('.ticket4');
 ticket4.innerHTML = `<div class="col-start-2 bg-[#0307121A] px-5 py-3 lg:px-10 lg:py-5 rounded-xl"><img src="./images/driver seat.svg" alt=""></div>`;
 busSeat.innerHTML = `<div class="col-end-4"></div>`;
-
 TicketL.forEach(letter => {
   busSeat.innerHTML += `
   <div class="py-5 text-center">${letter}</div>
