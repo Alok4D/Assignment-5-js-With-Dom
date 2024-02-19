@@ -59,7 +59,7 @@
       <div class="flex flex-col justify-center items-center gap-11 bg-[url('./images/banner.png')] bg-no-repeat bg-cover bg-center h-[650px] w-full rounded-[32px]">
         <div class="text-4xl lg:text-6xl font-extrabold text-white text-center">End-to-End Travel with <br><span class="text-[#1DD100]">P Paribahan</span></div>
         <p class="text-center inter font-normal text-base lg:text-lg text-white max-w-2xl">To ensure fastest communication among transport business network and travelers with advance security and administrative control, to gain faster and secured growth of business with larger customer segment.</p>
-        <button onclick="scrollTickets()" class="font-bold text-xl text-[#030712] py-5 px-7 bg-[#1DD100] rounded-xl">Buy Tickets</button>  
+        <button onclick="scrollToTickets()" class="font-bold text-xl text-[#030712] py-5 px-7 bg-[#1DD100] rounded-xl">Buy Tickets</button>  
       </div>
       <!--  -->
       <div class="bg-transparent flex gap-6 flex-wrap lg:flex-nowrap lg:absolute lg:-bottom-16">
@@ -135,14 +135,10 @@
       <h1 class="text-[#030712] font-bold text-4xl text-center my-10">P.H Paribahan</h1>
       <p class="text-[#03071299] text-lg font-normal text-center">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
 
-      <!-- ticket counter -->
+      <!-- seat counter -->
       <div class="w-[96%] lg:w-5/6 mx-auto raleway space-y-8 py-20">
-        <!-- ticket detail and price -->
         <div class="p-8 bg-white rounded-3xl flex flex-col md:flex-row justify-between">
-
-          <!-- detail -->
           <div class="md:w-3/4 space-y-6">
-            <!-- detail header -->
             <div class="flex md:flex-row flex-col justify-between items-center">
               <div class="flex gap-1">
                 <img src="./images/bus-logo.png" alt="" class="h-8 md:h-11 md:w-[68px]">
@@ -158,8 +154,6 @@
                 <span id="left-seats" class="left-seats">40</span> Seats left
               </div>
             </div>
-
-            <!-- detail body -->
             <div class="bg-[#F7F8F8] rounded-3xl p-8 space-y-6">
               <div class="border-b border-dashed border-[#03071233] flex justify-between p-6">
                 <h4 class="text-lg font-semibold text-[#03071299]">Route</h4>
@@ -177,8 +171,7 @@
             </div>
 
           </div>
-
-          <!-- ticket price -->
+          <!-- t-price -->
           <div class="md:w-1/5 flex flex-col justify-center items-center gap-5">
             <img src="./images/fare.png" alt="">
             <div>
@@ -187,8 +180,6 @@
             </div>
           </div>
         </div>
-
-        <!-- functional tickets -->
         <div class="md:p-6 bg-white rounded-3xl flex flex-col lg:flex-row justify-evenly">
           <div class="md:w-[60%] space-y-6">
             <div class="p-6 border-dashed border-[#03071233] border-b">
@@ -198,8 +189,6 @@
               <span class="flex"><img src="./images/seat-gray.png" alt="">Available</span>
               <span class="flex"><img src="./images/seat-green-filled.png" alt="">Selected</span>
             </div>
-
-            <!-- bus tickets section -->
             <div class="inter flex gap-6 ml-[88px]">
               <div class="ticket grid grid-cols-3 gap-1 lg:gap-6 grid-rows-11">
               </div>
@@ -209,24 +198,14 @@
           </div>
 
           <div class="divider lg:divider-horizontal"></div>
-
-          <!-- tickets prices cupon and user detail -->
           <div class=" space-y-6">
             <div class="p-6 border-dashed border-[#03071233] border-b">
               <h3 class="text-[#030712] font-semibold text-2xl">Select Your Seat</h3>
             </div>
-
-            <!-- total price and bought info -->
             <div class="inter space-y-5">
-
-              <!-- bought info -->
               <div class="bg-[#F7F8F8] rounded-xl p-8 space-y-6">
                 <table class="w-full">
-                  <colgroup>
-                    <!-- <col style="width: 500px">
-                    <col style="width: 500px">
-                    <col style="width: 500px"> -->
-                    </colgroup>
+                  <colgroup></colgroup>
                   <thead>
                     <tr class="border-b border-dashed border-[#03071233]">
                       <th class="p-4 text-[#030712] text-base font-medium">Seat <span id="seat-count" class="bg-[#1DD100]  text-white text-xs font-bold px-2 rounded-lg">0</span></th>
@@ -239,7 +218,7 @@
                   </tbody>
                 </table>
                 <hr class="border border-[#03071233]">
-                <!-- total price -->
+                <!-- total-->
                 <div>
                   <div class="flex justify-between *:text-[#030712] *:font-medium *:text-base">
                     <h3>Total Price</h3>
@@ -250,8 +229,6 @@
                     <h3>BDT <span id="discount-price">0</span></h3>
                   </div>
                 </div>
-                
-                <!-- cupon input -->
                 <div>
                   <div id="cupon-area">
                     <input id="cupon" type="text" placeholder="Have any copupon?" class="text-sm font-normal text-[#03071266] p-5 rounded-xl">
@@ -266,7 +243,7 @@
                 </div>
               </div>
 
-              <!-- user info -->
+              <!-- submit part -->
               <div>
                 <form action="" class="space-y-6">
                   <label for="name" class="flex flex-col justify-stretch text-[#030712] font-semibold text-base space-y-4">
@@ -286,23 +263,17 @@
                   </label>
                 </form>
               </div>
-              <!-- terms and condition -->
               <div class="space-x-10 flex justify-center">
                 <span class="text-base font-normal text-[#03071299]"><u>Terms and Conditions</u></span>
                 <span class="text-base font-normal text-[#03071299]"><u>Cancellation Policy</u></span>
               </div>
-              
             </div>
-            
           </div>
-
         </div>
-
       </div>
-
     </section>
 
-    <!-- modal -->
+    <!-- next part -->
     <dialog id="my_modal_1" class="modal roboto">
       <div class="modal-box flex flex-col gap-4 justify-center items-center p-16">
         <img src="./images/success.png" alt="">
@@ -314,7 +285,6 @@
         </p>
         <div class="modal-action">
           <form method="dialog">
-            <!-- if there is a button in form, it will close the modal -->
             <button class="btn bg-[#27AE60] rounded-full px-20 text-white font-semibold text-lg hover:bg-[#299c59]">Continue</button>
           </form>
         </div>
